@@ -2,17 +2,20 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: "Inter", sans-serif;
 }
 
 .choose-us{
-    margin-top: 150px;
+    margin-top: 80px;
+}
+.choose-us h3{
+  font-size: 30px;
+  font-weight: 600;
 }
 .choose-us p{
   margin-bottom: 60px;
 }
-.choose-row{
-    width: 100%;
-}
+
 .choose-col{
     border: 1px solid #f1ebeb;
     border-radius: 20px;
@@ -20,12 +23,27 @@
     height: 95%;
     text-align: start;
     margin: 10px;
-    width: 95%;
-    background: linear-gradient(to bottom, #ffffff, #f1ebeb, #faf6f6);
+    width: 100%;
+    background: linear-gradient(to bottom, #fffdfd, #fffdfd, #faf6f6);
 
 }
+
 .choose-col p{
     color: #7a7474;
+}
+
+.choose-col2{
+    border: 1px solid #f1ebeb;
+    border-radius: 20px;
+    padding: 20px 20px 20px 40px;
+    text-align: start;
+    margin: 10px;
+    width: 100%;
+    background: linear-gradient(to bottom, #ffffff, #fafafa, #faf6f6);
+    display: flex
+}
+.choose-col2 img{
+  width: 50%;
 }
 
 /* -------------------- integration slider */
@@ -84,11 +102,13 @@
 /* ------------------------ your store */
 
 .your-store{
-    margin-top: 150px;
+    margin-top: 100px;
     
 }
 .your-store h3{
   margin-bottom: 50px;
+  font-size: 30px;
+  font-weight: 600;
 }
 .store-row{
     width: 100%;
@@ -101,7 +121,7 @@
     text-align: start;
     margin: 10px;
     width: 95%;
-    background: linear-gradient(to bottom, #ffffff, #f1ebeb, #faf6f6);
+    background: linear-gradient(to bottom, #ffffff, #f8f5f5, #faf6f6);
     line-height: 20px;
 }
 .store-col h5{
@@ -114,14 +134,16 @@
 /* ------------- handle */
 
 .handle {
-  padding: 50px 0;
+   background: #f9f9f9;
+   margin-top: 80px;
+   padding-bottom: 50px;
 }
 
 .handle h3 {
-  font-size: 2rem;
-  font-weight: bold;
-  margin-bottom: 40px;
-  margin-top: 100px;
+  font-size: 30px;
+  font-weight: 600;
+  margin-bottom: 20px;
+  margin-top: 40px;
   text-align: center;
 }
 
@@ -131,7 +153,7 @@
 }
 
 .card {
-  border: 5px solid black;
+  border: 5px solid white;
   border-radius: 20px;
   overflow: hidden;
   background: #fff;
@@ -146,6 +168,34 @@
   box-shadow: 0 8px 25px rgba(0,0,0,0.12);
 }
 
+.card-img-container {
+  position: relative;
+  overflow: hidden;
+}
+
+.card-img-container img {
+  height: 220px;
+  width: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.card-img-container::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 50%; /* effect kitna upar tak ho */
+  background: linear-gradient(
+    to top,
+    rgba(255, 255, 255, 1) 0%,
+    rgba(255, 255, 255, 0) 100%
+  );
+  pointer-events: none;
+}
+
+
 .card-img-top {
   height: 220px;
   object-fit: cover;
@@ -158,7 +208,8 @@
 .card-text {
   font-size: 1.1rem;
   font-weight: 600;
-  margin-bottom: 10px;
+  margin-bottom: 5px;
+  text-align: start;
 }
 
 .card-subtext {

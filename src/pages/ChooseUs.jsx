@@ -7,7 +7,7 @@ export default function ChooseUs() {
           
           <div className="container choose-us">
               <h3 style={{marginBottom:'20px'}}>Why Choose Us</h3>
-              <p style={{padding:'0 300px'}}>We Don’t Just Build Stores, We Build Sales Machines You could hire anyone to set up a Shopify site. But will it actually make sales? Here’s what we do differently:</p>
+              <p style={{padding:'0 200px'}}>We Don’t Just Build Stores, We Build Sales Machines You could hire anyone to set up a Shopify site. But will it actually make sales? Here’s what we do differently:</p>
 
               <div className="row choose-row">
                   
@@ -39,17 +39,21 @@ export default function ChooseUs() {
                 <div className="row choose-row">
                 
                   <div className="col-lg-6 col-md-6 col-12">      
-                      <div className='choose-col'>
-                          <h4>Marketing-Ready from Day One </h4>
-                      <p>Tracking, analytics, and sales boosters built in</p>
+                      <div className='choose-col2'>
+                          <div style={{marginTop:'50px'}}>
+                            <h4>Marketing-Ready from Day One </h4>
+                            <p>Tracking, analytics, and sales boosters built in</p>
+                          </div>
                       <img src="/images/choose4.svg" alt="" className='img-fluid'/>
                       </div>
 
                   </div>
                   <div className="col-lg-6 col-md-6 col-12">
-                      <div className='choose-col'>
-                          <h4>Revenue Driven Approach </h4>
-                      <p>We develop with revenue in mind, not just looks.</p>
+                      <div className='choose-col2'>
+                          <div style={{marginTop:'50px'}}>
+                            <h4>Revenue Driven Approach </h4>
+                            <p>We develop with revenue in mind, not just looks.</p>
+                        </div>
                       <img src="/images/choose5.svg" alt="" className='img-fluid'/>
                     </div>
                   </div>

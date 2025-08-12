@@ -1,9 +1,11 @@
 import React from "react";
-// import "./HeroSection.css";
 
 const HeroSection = () => {
   return (
     <div className="hero-container">
+      {/* White fade overlay */}
+      <div className="fade-overlay"></div>
+
       <div className="floating-card card-left">
         <span>Loads in seconds</span>
       </div>
@@ -15,11 +17,10 @@ const HeroSection = () => {
       <div className="floating-card card-right">
         <span>Increases 70% chances of checkout</span>
       </div>
-          
-        <div className="floating-card card-right1">
+
+      <div className="floating-card card-right1">
         <span>Works perfectly on every device</span>
       </div>
-
     </div>
   );
 };

@@ -6,6 +6,10 @@ import ChooseUs from '../pages/ChooseUs'
 import IntegrationSlider from '../pages/IntegrationSlider'
 import YourStore from '../pages/YourStore'
 import Handle from '../pages/Handle'
+import Work from '../slides/Work'
+import '../slides/slide.css'
+import TestimonialSlider from '../slides/TestimonialSlider'
+import Form from '../slides/Form'
 
 export default function Main() {
   return (
@@ -53,6 +57,29 @@ export default function Main() {
 
         <div className="row">
           <IntegrationSlider></IntegrationSlider>
+        </div>
+
+        <div className="row">
+          <Work></Work>
+        </div>
+
+        <div className="row">
+          <div className="banner">
+            <button>Pricing</button>
+            <h2>Your Store Will Pay for Itself Before You Know It</h2>
+            <p>We don’t believe in charging you for just a website.
+              When we build your Shopify store, we build it to make money fast.</p>
+
+            <img src="" alt=""/>
+          </div>
+        </div>
+
+        <div className="row">
+          <TestimonialSlider></TestimonialSlider>
+        </div>
+
+        <div className="row">
+          <Form></Form>
         </div>
 
       </div>
