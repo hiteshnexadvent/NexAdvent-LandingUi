@@ -7,13 +7,35 @@
 
 /*  ------------------ header */
 
-.navbar{
-    padding: 20px;
+.navbar {
+  padding: 20px;
+  position: sticky;
+  top: 0;
+  z-index: 999;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease, backdrop-filter 0.3s ease;
 }
-.navbar li{
-    font-weight: 600;
-    color: rgb(224, 230, 236);
+
+/* Default Transparent */
+.navbar.transparent-nav {
+  background-color: rgba(255, 255, 255, 0.1) !important;
+  backdrop-filter: blur(0px);
 }
+
+/* Scroll hone ke baad White + Blur */
+.navbar.scrolled {
+  background-color: rgba(255, 255, 255, 0.6) !important;
+  backdrop-filter: blur(10px);
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.navbar li {
+  font-weight: 600;
+}
+
+.navbar a.nav-link {
+  color: #818181;
+}
+
 
 /* ----------------- main */
 
@@ -83,11 +105,17 @@
 }
 
 
+.center-phone {
+  position: relative;
+  display: inline-block;
+}
+
 .center-phone img {
   max-width: 250px;
   z-index: 2;
   position: relative;
 }
+
 
 .floating-card {
   position: absolute;

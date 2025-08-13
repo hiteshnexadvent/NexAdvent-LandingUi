@@ -21,22 +21,22 @@ const IntegrationSlider = () => {
 
       <motion.div
         className="arc-container"
-        animate={{ rotate: 360 }}
-        transition={{ repeat: Infinity, duration: 25, ease: "linear" }}
+        animate={{ rotate: [0, 360] }}
+        transition={{ repeat: Infinity, duration: 30, ease: "linear" }}
       >
         {integrations.map((item, i) => {
-          // Spread items over full circle
           const angle = (360 / integrations.length) * i;
           return (
-            <div
+            <motion.div
               key={i}
               className="arc-item"
+              whileHover={{ scale: 1.1, boxShadow: "0 12px 30px rgba(0,0,0,0.2)" }}
               style={{
-                transform: `rotate(${angle}deg) translate(0, -160px) rotate(-${angle}deg)`,
+                transform: `rotate(${angle}deg) translate(0, -160px) rotate(-${angle}deg)`
               }}
             >
               <img src={item.img} alt={item.name} />
-            </div>
+            </motion.div>
           );
         })}
       </motion.div>

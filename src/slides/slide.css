@@ -13,18 +13,18 @@
   justify-content: space-between;
   padding: 120px 5%;
   gap: 50px;
-  min-height: 100vh; /* full section height */
+  position: relative;
 }
 
+
 .steps-left {
-    display: flex;
+  display: flex;
   flex-direction: column;
-  align-items: flex-start; /* left align */
+  align-items: flex-start;
   flex: 1;
   position: sticky;
   top: 150px;
 }
-
 
 .steps-left .steps-tag {
   background: #f2f2f2;
@@ -34,21 +34,11 @@
   font-size: 14px;
   font-weight: 500;
   margin-bottom: 20px;
-  display: inline-block; /* taaki sirf content ke hisaab ka width ho */
-  text-align: left; 
 }
 
-.steps-left h2 {
-  font-size: 36px;
-  font-weight: 600;
-  line-height: 1.3;
-  text-align: start;
-}
 
 .steps-right {
   flex: 1;
-  display: flex;
-  flex-direction: column;
   position: relative;
 }
 
@@ -56,19 +46,24 @@
   background: rgb(231, 231, 231);
   border-radius: 16px;
   padding: 20px;
-  display: flex;
-  align-items: flex-start;
-  gap: 15px;
-  box-shadow: 0 8px 25px rgba(0,0,0,0.08);
-  position: relative;
-  margin-top: 20px; 
   height: 300px;
+  box-shadow: 0 8px 25px rgba(0,0,0,0.08);
 }
+
+.step-title {
+  color: #143cbd;
+  font-weight: 600;
+}
+
+.step-desc {
+  color: #585656;
+}
+
 
 /* ----------------- banner */
 
 .banner button{
-    background: #f2f2f2;
+  background: #f2f2f2;
   border: 1px solid grey;
   border-radius: 30px;
   padding: 8px 20px;
@@ -79,7 +74,7 @@
 
 .banner h2{
     font-size: 30px;
-    font-weight: 600;
+    font-weight: 500;
 }
 
 .banner p{
@@ -93,35 +88,42 @@
 }
 
 /* ---------------------- testimonial */
-
 .testimonial-section {
-  padding: 60px 5%;
   background: #fff;
+  padding: 40px 0;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  margin-top: 80px;
+  margin-bottom: 80px;
 }
 
-.testimonial-heading {
-  text-align: center;
-  font-size: 30px;
-  font-weight: 600;
-  margin-bottom: 40px;
-}
-
-.testimonial-container {
+/* Row wrapper */
+.slider-row {
   display: flex;
   gap: 20px;
-  overflow-x: auto;
-  scroll-snap-type: x mandatory;
-  padding-bottom: 10px;
+  min-width: max-content;
 }
 
+/* Animation for left scroll */
+.slider-row.left {
+  animation: scroll-left 30s linear infinite;
+}
+
+/* Animation for right scroll */
+.slider-row.right {
+  animation: scroll-right 30s linear infinite;
+}
+
+/* Card styles */
 .testimonial-card {
   flex: 0 0 320px;
-  background: #f7f4f4;
+  background: #fff;
   border-radius: 16px;
   box-shadow: 0 8px 20px rgba(0,0,0,0.05);
-  border: 1px solid black;
+  border: 1px solid #eee;
   padding: 20px;
-  scroll-snap-align: start;
 }
 
 .stars {
@@ -130,15 +132,14 @@
 
 .star {
   color: #FFD700;
-  font-size: 30px;
+  font-size: 20px;
 }
 
 .testimonial-text {
   font-size: 15px;
   line-height: 1.5;
   margin-bottom: 20px;
-  color: #444;
-  text-align: start;
+  color: #333;
 }
 
 .testimonial-author {
@@ -164,11 +165,22 @@
   color: #777;
 }
 
-/* ------------- push */
+/* Keyframes for scrolling */
+@keyframes scroll-left {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+@keyframes scroll-right {
+  0% { transform: translateX(-50%); }
+  100% { transform: translateX(0); }
+}
+
+/* ------------- form */
 
 .form h2{
     font-size: 30px;
-    font-weight: 600;
+    font-weight: 500;
 }
 
 .form p{
@@ -183,21 +195,36 @@
 }
 
 .contact-form {
+  position: relative;
+  z-index: 1;
   background: #fff;
   border-radius: 50px;
-  padding: 30px;
-  width: 600px;
+  padding: 60px;
+  width: 700px;
   height: auto;
   display: flex;
   flex-direction: column;
   gap: 12px;
-  position: relative;
   box-shadow: 0 10px 30px rgba(0,0,0,0.05);
-  background-clip: padding-box;
-  box-shadow: 0 10px 30px rgba(0,0,0,0.05);
-  border: 20px solid; 
-  border-image: linear-gradient(180deg, #a4c8ff, #4484ff, #a4c8ff) 1
+  overflow: hidden; 
 }
+
+/* Gradient border using pseudo-element */
+.contact-form::before {
+  content: "";
+  position: absolute;
+  inset: 0; 
+  border-radius: 50px;
+  padding: 20px; 
+  background: linear-gradient(180deg, #a4c8ff, #4484ff, #a4c8ff);
+  -webkit-mask:
+    linear-gradient(#fff 0 0) content-box,
+    linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude; 
+  z-index: -1;
+}
+
 
 .form-wrapper::before {
   content: "";
@@ -245,4 +272,112 @@ textarea {
 
 .form-btn:hover {
   opacity: 0.9;
+}
+
+/* ---------------------- footer */
+
+.footer {
+  background: #fafafa;
+  padding: 40px 10%;
+  font-family: Arial, sans-serif;
+  color: #333;
+  margin-top: 50px;
+}
+
+.footer-top {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 40px;
+  border-bottom: 1px solid #eee;
+  padding-bottom: 40px;
+  text-align: start;
+}
+
+.footer-left h3 {
+  margin-bottom: 5px;
+  font-weight: 600;
+  color: #a3a1a1;
+}
+
+.footer-email {
+  font-size: 20px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.newsletter {
+  display: flex;
+  align-items: center;
+  background: white;
+  border-radius: 50px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+  overflow: hidden;
+  padding: 5px;
+  margin-top: 80px;
+  width: 450px;
+  border: 5px solid #eee9e9;
+}
+
+.newsletter input {
+  
+  outline: none;
+  padding: 12px 20px;
+  font-size: 14px;
+  flex: 1;
+}
+
+.newsletter button {
+  background: #5a9bff;
+  color: white;
+  border: none;
+  padding: 12px 25px;
+  border-radius: 50px;
+  font-size: 14px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.newsletter button:hover {
+  background: #4787e8;
+}
+
+.footer-links {
+  display: flex;
+  gap: 80px;
+}
+
+.footer-links h4 {
+  font-size: 16px;
+  margin-bottom: 15px;
+  color: #a3a1a1;
+  font-weight: 600;
+}
+
+.footer-links ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footer-links li {
+  margin-bottom: 8px;
+  cursor: pointer;
+  color: #8f8989;
+}
+
+.footer-links li:hover {
+  color: #4787e8;
+}
+
+.footer-bottom {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+  font-size: 14px;
+  color: #888;
+}
+
+.made {
+  font-style: italic;
 }
