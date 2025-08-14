@@ -71,7 +71,6 @@
 
 .main-row1 button:hover {
   box-shadow: 0 8px 15px -5px #3f3d3d; 
-  
 }
 
 
@@ -194,4 +193,76 @@
   100% {
     transform: translateX(-50%);
   }
+}
+
+
+
+/* ------------------------------ responsive for mobile */
+
+@media (min-width:360px) and (max-width:490px) {
+
+  .main-row1 h1{
+    font-size: 56px !important;
+  }
+  
+  .main-row1 p{
+    text-align: justify;
+  }
+  .main-row1 button {
+    justify-content: flex-start; 
+    display: flex;         
+    align-items: center;   
+  }
+  .hero-container{
+    padding: 18px 0px 0px 0px !important;
+  }
+  .center-phone img {
+    max-width: 180px;
+  }
+  .floating-card {
+    position: static;
+    display: block;
+    margin: 10px auto;
+    text-align: center;
+  }
+  .hero-container {
+    padding: 40px 15px;
+  }
+  .floating-card {
+    visibility: hidden;
+  }
+
+
+}
+
+@media (min-width:765px) and (max-width:820px) {
+
+  .main-row1 p{
+    text-align: justify;
+  }
+
+  .hero-container{
+    padding: 0;
+  }
+  .center-phone img {
+    max-width: 200px;
+  }
+  .floating-card {
+    font-size: 14px;
+    padding: 8px 16px;
+  }
+  .card-left {
+    left: 10%;
+  }
+  .card-right,
+  .card-right1 {
+    right: 10%;
+  }
+  .floating-card {
+    visibility: hidden;
+  }
+
+
+
+
 }

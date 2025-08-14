@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useRef, useEffect, useState } from "react";
 import { motion } from "framer-motion";
 
 const integrations = [
@@ -13,6 +13,21 @@ const integrations = [
 ];
 
 const IntegrationSlider = () => {
+  const containerRef = useRef(null);
+  const [radius, setRadius] = useState(160);
+
+  useEffect(() => {
+    const updateRadius = () => {
+      if (containerRef.current) {
+        const size = containerRef.current.offsetWidth;
+        setRadius(size / 2 - 40); // 40px = half of icon size
+      }
+    };
+    updateRadius();
+    window.addEventListener("resize", updateRadius);
+    return () => window.removeEventListener("resize", updateRadius);
+  }, []);
+
   return (
     <section className="integration-section">
       <h2>
@@ -20,6 +35,7 @@ const IntegrationSlider = () => {
       </h2>
 
       <motion.div
+        ref={containerRef}
         className="arc-container"
         animate={{ rotate: [0, 360] }}
         transition={{ repeat: Infinity, duration: 30, ease: "linear" }}
@@ -32,7 +48,7 @@ const IntegrationSlider = () => {
               className="arc-item"
               whileHover={{ scale: 1.1, boxShadow: "0 12px 30px rgba(0,0,0,0.2)" }}
               style={{
-                transform: `rotate(${angle}deg) translate(0, -160px) rotate(-${angle}deg)`
+                transform: `rotate(${angle}deg) translate(0, -${radius}px) rotate(-${angle}deg)`
               }}
             >
               <img src={item.img} alt={item.name} />

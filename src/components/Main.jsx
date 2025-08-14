@@ -32,7 +32,7 @@ export default function Main() {
 
         </div>
 
-        <div className="row">
+         <div className="row">
             <div className="box1">
               <HeroSection></HeroSection>
             </div>
@@ -51,6 +51,8 @@ export default function Main() {
           <YourStore></YourStore>
         </div>
 
+        
+
         <div className="row">
           <Handle></Handle>
         </div>
@@ -59,12 +61,16 @@ export default function Main() {
           <IntegrationSlider></IntegrationSlider>
         </div>
 
+        
+
         <div className="row">
           <Work></Work>
         </div>
 
+        
+
         <div className="row">
-          <div className="banner">
+          <div className="col-12 banner">
             <button>Pricing</button>
             <h2>Your Store Will Pay for Itself Before You Know It</h2>
             <p>We don’t believe in charging you for just a website.
@@ -74,9 +80,13 @@ export default function Main() {
           </div>
         </div>
 
+        
+
         <div className="row">
           <TestimonialSlider></TestimonialSlider>
         </div>
+
+        
 
         <div className="row">
           <Form></Form>

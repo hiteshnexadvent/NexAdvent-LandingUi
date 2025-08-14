@@ -3,7 +3,7 @@ import "./slide.css";
 
 export default function Form() {
   return (
-    <div>
+    <div className="form-top">
       <div className="form">
         <h2>
           Your Competitors Are Already Selling Online. What Are You Waiting For?

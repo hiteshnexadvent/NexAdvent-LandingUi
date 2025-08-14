@@ -11,7 +11,7 @@ export default function ChooseUs() {
 
               <div className="row choose-row">
                   
-                  <div className="col-lg-4 col-md-3 col-12">
+                  <div className="col-lg-4 col-md-4 col-12">
                       
                       <div className='choose-col'>
                           <h4>We design for conversions</h4>
@@ -20,14 +20,14 @@ export default function ChooseUs() {
                       </div>
 
                   </div>
-                  <div className="col-lg-4 col-md-3 col-12">
+                  <div className="col-lg-4 col-md-4 col-12">
                       <div className='choose-col'>
                           <h4>We set you up for marketing </h4>
                       <p>Facebook Pixel, Google Analytics, email flows, upsells, all ready from day one</p>
                       <img src="/images/choose2.svg" alt="" className='img-fluid'/>
                     </div>
                   </div>
-                  <div className="col-lg-4 col-md-3 col-12">
+                  <div className="col-lg-4 col-md-4 col-12">
                       <div className='choose-col'>
                           <h4>We think like business owners</h4>
                       <p>Because a pretty store means nothing if it doesn’t bring in revenue</p>
