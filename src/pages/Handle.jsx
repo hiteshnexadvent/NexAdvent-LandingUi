@@ -5,12 +5,13 @@ export default function Handle() {
       <div>
 
           <div className="container">
-              <div className="row handle">
+            <div className="row handle">
                   
           <h3> Here’s Everything We Handle For You</h3>
           <p>You focus on your products. We’ll handle the tech and strategy.</p>
           
           <div className="col-lg-4 col-md-6 col-12 handle-col">
+          
               
               <div className="card" style={{ width: "20rem" }}>
             <div className="card-img-container">

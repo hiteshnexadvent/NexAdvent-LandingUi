@@ -22,7 +22,20 @@ export default function Main() {
 
           <div className="col-lg-7 col-md-8 col-12">
 
-            <h1>Let’s Build a Shopify Store That Actually Sells</h1>
+            <h1>
+  Let’s Build a   
+  <img 
+    src="/images/shopify.png"  
+    alt="Shopify" 
+    style={{ 
+      height: "80px",  
+      verticalAlign: "middle", 
+      margin: "0px 0px 10px 20px" 
+    }} 
+  />
+  Store That Actually Sells
+</h1>
+
 
           </div>
           <div className="col-lg-5 col-md-4 col-12">
@@ -71,7 +84,6 @@ export default function Main() {
 
         <div className="row">
           <div className="col-12 banner">
-            <button>Pricing</button>
             <h2>Your Store Will Pay for Itself Before You Know It</h2>
             <p>We don’t believe in charging you for just a website.
               When we build your Shopify store, we build it to make money fast.</p>

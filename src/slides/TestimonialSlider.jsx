@@ -4,31 +4,27 @@ import "./slide.css";
 const testimonials = [
   {
     rating: 5,
-    text: "Lunera made our site look premium without custom coding. Perfect blend of form and function.",
-    name: "Marcus Reed",
-    role: "CTO, TechVault",
-    img: "/images/test1.avif"
+    text: "NexAdvent helped us build a strong online presence. Their ad strategies brought real customers and steady growth in just a few months.",
+    name: "Arnav",
+    role: "Fashion Brand Owner",
   },
   {
     rating: 5,
-    text: "The attention to detail in Lunera is unmatched. Our clients love the polished feel!",
-    name: "Sophie Yang",
-    role: "UX Designer, FlowStudio",
-    img: "/images/test1.avif"
+    text: "The team is professional, responsive, and result-oriented. Finally, a marketing agency that actually delivers what they promise.",
+    name: "Rohit",
+    role: "Restaurant Owner",
   },
   {
     rating: 5,
-    text: "Lunera’s modern aesthetics and ease of use impressed both our team and customers.",
-    name: "Nia Johnson",
-    role: "Product Lead, ZenMetrics",
-    img: "/images/test1.avif"
+    text: "We trusted NexAdvent for LinkedIn marketing, and they brought in genuine B2B leads. Their approach is data-driven and effective.",
+    name: "Mehul",
+    role: "IT Consultant",
   },
   {
     rating: 5,
-    text: "Lunera’s modular design let us customize effortlessly. Our landing page performance soared!",
-    name: "Elena Petrova",
-    role: "Head of Growth, DataPulse",
-    img: "/images/test1.avif"
+    text: "From day one, they guided us with the right strategy. Now our campaigns run smoothly, and we get consistent results every month.",
+    name: "Priya",
+    role: "E-Commerce Entrepreneur",
   }
 ];
 function Row({ direction }) {
@@ -46,7 +42,7 @@ function Row({ direction }) {
           </div>
           <p className="testimonial-text">{t.text}</p>
           <div className="testimonial-author">
-            <img src={t.img} alt={t.name} className="author-img" />
+            {/* <img src={t.img} alt={t.name} className="author-img" /> */}
             <div>
               <h4 className="author-name">{t.name}</h4>
               <p className="author-role">{t.role}</p>

@@ -6,8 +6,8 @@ export default function ChooseUs() {
       <div>
           
           <div className="container choose-us">
-              <h3 style={{marginBottom:'20px'}}>Why Choose Us</h3>
-              <p style={{padding:'0 200px'}}>We Don’t Just Build Stores, We Build Sales Machines You could hire anyone to set up a Shopify site. But will it actually make sales? Here’s what we do differently:</p>
+              <h3 style={{marginBottom:'15px'}}>Why Choose Us</h3>
+              <p style={{padding:'0 254px',textAlign:'justify'}}>We Don’t Just Build Stores, We Build Sales Machines You could hire anyone to set up a Shopify site. But will it actually make sales? Here’s what we do differently:</p>
 
               <div className="row choose-row">
                   

@@ -13,7 +13,7 @@
   font-weight: 500;
 }
 .choose-us p{
-  margin-bottom: 60px;
+  margin-bottom: 40px;
 }
 
 .choose-col{
@@ -53,14 +53,13 @@
   text-align: center;
   padding: 80px 20px;
   background: linear-gradient(to bottom, #ffffff, #e6e9f0);
-  margin-top: 50px;
+  margin-top: 40px;
 }
 
 .integration-section h2 {
   font-size: 2.5rem;
   font-weight: 500;
   margin-bottom: 100px;
-  color: #111;
 }
 
 .arc-container {
@@ -92,10 +91,6 @@
   width: 60%;
 }
 
-.arc-item:hover {
-  transform: scale(1.05);
-  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.2);
-}
 
 
 /* ------------------------ your store */
@@ -105,7 +100,7 @@
     
 }
 .your-store h3{
-  margin-bottom: 50px;
+  margin-bottom: 40px;
   font-size: 30px;
   font-weight: 500;
 }
@@ -136,12 +131,14 @@
    background: #f9f9f9;
    margin-top: 80px;
    padding-bottom: 50px;
+   padding-left: 40px;
+   padding-right: 40px;
 }
 
 .handle h3 {
   font-size: 30px;
   font-weight: 500;
-  margin-bottom: 20px;
+  margin-bottom: 10px;
   margin-top: 40px;
   text-align: center;
 }
@@ -152,14 +149,13 @@
 }
 
 .card {
-  border: 5px solid white;
+  border: 12px solid white;
   border-radius: 20px;
   overflow: hidden;
   background: #fff;
   box-shadow: 0 4px 15px rgba(0,0,0,0.08);
   transition: all 0.3s ease;
-  max-width: 360px;
-  margin-top: 50px;
+  margin-top: 30px;
 }
 
 .card:hover {
@@ -201,13 +197,12 @@
 }
 
 .card-body {
-  padding: 20px;
+  padding: 12px;
 }
 
 .card-text {
-  font-size: 1.1rem;
-  font-weight: 600;
-  margin-bottom: 5px;
+  font-size: 1.2rem;
+  font-weight: 500;
   text-align: start;
 }
 
@@ -218,45 +213,71 @@
 
 
 @media (min-width:360px) and (max-width:490px) {
-  
+
+  .choose-us h3{
+    font-size: 25px !important;
+  }
   .choose-us p{
-    padding: 0 !important;
+    padding:0 15px !important;
+    font-size: 15px;
   }
   .choose-col{
     margin: auto;
     padding: 30px;
   }
+  .choose-col h4{
+    font-size: 20px;
+  }
   .choose-col2{
     padding: 10px !important;
     margin: auto;
+  }
+  .choose-col2 h4{
+    font-size: 20px;
+  }
+  .choose-col p{
+    padding: 0 !important;
+  }
+  .choose-col2 p{
+    padding: 0 !important;
   }
 
   .your-store{
     margin-top: 50px !important;
   }
   .your-store h3{
-    padding: 0px !important;
-    font-size: 25px;
+    padding: 0 15px !important;
+    font-size: 23px !important;
+    line-height: 30px;
+    text-align: start !important;
   }
   .store-col h5{
     padding: 20px 20px 0px 0 !important;
+    font-size: 20px !important;
   }
+  
 
   .handle{
     margin-top: 40px;
   }
   .handle h3{
     font-size: 25px !important;
+    text-align: start;
+    padding: 0 15px;
   }
   .handle p{
-    padding: 0 20px !important;
+    padding: 2px 20px !important;
+    text-align: start;
+  }
+  .card-body{
+    padding: 10px 5px !important;
   }
 
   .integration-section{
     margin-top: 0px;
   }
   .integration-section h2{
-    font-size: 2rem;
+    font-size: 25px;
   }
   .arc-container {
     width: 220px;

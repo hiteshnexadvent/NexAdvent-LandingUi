@@ -46,7 +46,6 @@ const IntegrationSlider = () => {
             <motion.div
               key={i}
               className="arc-item"
-              whileHover={{ scale: 1.1, boxShadow: "0 12px 30px rgba(0,0,0,0.2)" }}
               style={{
                 transform: `rotate(${angle}deg) translate(0, -${radius}px) rotate(-${angle}deg)`
               }}

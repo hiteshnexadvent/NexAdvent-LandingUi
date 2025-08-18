@@ -1,14 +1,14 @@
 import './App.css';
 import Main from './components/Main';
-import Footer from './slides/Footer';
+import FooterMarquee from './slides/FooterMarquee';
 
 function App() {
   return (
     <div className="App">
       
       <Main></Main>
-      <Footer></Footer>
-
+      <FooterMarquee></FooterMarquee>
+      
     </div>
   );
 }

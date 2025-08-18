@@ -6,14 +6,14 @@ export default function YourStore() {
       <div>
           
           <div className="container your-store">
-              <h3 style={{padding:'0 100px'}}>Your Store Should Be Working Harder Than You With NexAdvent, your Shopify store will</h3>
+              <h3 style={{padding:'0 254px',textAlign:'justify'}}>Your Store Should Be Working Harder Than You With NexAdvent, your Shopify store will</h3>
 
               <div className="row store">
                   
                   <div className="col-lg-4 col-md-4 col-12">
                       
                       <div className='store-col'>
-                        <i class="fas fa-cart-arrow-down" style={{ fontSize:'30px' ,color:'#2c7be5'}}></i>
+                        <i class="fas fa-cart-arrow-down" style={{ fontSize:'30px' ,color:'#4F1470'}}></i>
                         <h5>With NexAdvent, your Shopify store will</h5>
                         <p>Win back abandoned carts automatically</p>
                       
@@ -22,7 +22,7 @@ export default function YourStore() {
                   </div>
                   <div className="col-lg-4 col-md-4 col-12">
                       <div className='store-col'>
-                        <i class="fas fa-cart-plus" style={{ fontSize:'30px' ,color:'#2c7be5'}}></i>
+                        <i class="fas fa-cart-plus" style={{ fontSize:'30px' ,color:'#4F1470'}}></i>
                         <h5>With NexAdvent, your Shopify store will</h5>
                         <p>Increase order value with upsells and cross-sells</p>
                       
@@ -30,7 +30,7 @@ export default function YourStore() {
                   </div>
                   <div className="col-lg-4 col-md-4 col-12">
                       <div className='store-col'>
-                        <i className="fas fa-search-dollar" style={{ fontSize: "30px", color: "#2c7be5" }}></i>
+                        <i className="fas fa-search-dollar" style={{ fontSize: "30px", color: "#4F1470" }}></i>
                         <h5>With NexAdvent, your Shopify store will</h5>
                         <p>Attract buyers with SEO-friendly product pages</p>
                     </div>

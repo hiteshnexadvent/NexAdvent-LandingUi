@@ -29,7 +29,7 @@ const HeroSection = () => {
           transition: "transform 0.05s linear",
         }}
       >
-        <img src="/images/mobile.avif" alt="Phone UI" />
+        <img src="/images/mobile.png" alt="Phone UI" />
       </div>
 
       <div className="floating-card card-right">
