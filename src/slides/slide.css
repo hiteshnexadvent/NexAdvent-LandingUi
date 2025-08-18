@@ -294,10 +294,10 @@ textarea {
 }
 
 .marquee-content span {
-  margin-right: 40px;
+  margin-right: 20px;
   display: inline-block;
   position: relative;
-  padding-left: 20px;
+  padding-left: 5px;
   padding-bottom: 40px;
   padding-top: -50px;
   font-family: 'Poppins', 'Segoe UI', sans-serif;

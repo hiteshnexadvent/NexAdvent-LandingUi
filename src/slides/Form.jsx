@@ -21,16 +21,14 @@ export default function Form() {
             <label>Email</label>
             <input type="email" placeholder="jane@framer.com" />
 
-            <label>Topic</label>
-            <select>
-              <option value="">Select...</option>
-              <option value="support">Support</option>
-              <option value="sales">Sales</option>
-              <option value="feedback">Feedback</option>
-            </select>
+            <label>Mobile</label>
+            <input type="mobile" placeholder="1234567890" />
 
-            <label>Message</label>
-            <textarea placeholder="Enter your message"></textarea>
+            <label>City/State</label>
+            <input type="city" placeholder="delhi" />
+
+            <label>Company Name</label>
+            <input type="company" placeholder="nexadvent" />
 
             <button type="submit" className="form-btn">
               Submit
