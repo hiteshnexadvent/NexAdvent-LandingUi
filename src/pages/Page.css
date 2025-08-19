@@ -313,3 +313,12 @@
 
 
 }
+
+@media (min-width:1400px) and (max-width:1450px) {
+
+  .handle {
+   padding-left: 100px;
+   padding-right: 100px;
+}
+
+}
