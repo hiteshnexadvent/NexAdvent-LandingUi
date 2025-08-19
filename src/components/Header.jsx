@@ -15,7 +15,13 @@ export default function Header() {
   return (
     <nav className={`navbar navbar-expand-lg ${scrolled ? 'scrolled' : 'transparent-nav'}`}>
       <div className="container-fluid logo">
-        <a className="navbar-brand fs-4" href="/"><img src="/images/logo.png" alt="nexadvent" style={{width:'15vw'}} /></a>
+        <a className="navbar-brand fs-4" href="/">
+          <img 
+            src="/images/logo.png" 
+            alt="nexadvent" 
+            className={`logo-img ${scrolled ? 'hide' : ''}`} 
+          />
+        </a>
       </div>
     </nav>
   );

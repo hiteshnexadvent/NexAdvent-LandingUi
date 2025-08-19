@@ -70,7 +70,7 @@ export default function Work() {
             <div key={index} className="step-card">
               <h3 className="step-title">{step.title}</h3>
               <p className="step-desc">{step.desc}</p>
-              <img
+              <img className="img-fluid"
                 src={step.image}
                 alt={step.title}
                 style={{ width: "60%", marginTop: "10px" }}

@@ -36,8 +36,17 @@
   color: #818181;
 }
 
-.logo img{
+
+.logo-img {
   margin-left:520px !important;
+  width: 15vw;
+  transition: opacity 0.5s ease, transform 0.5s ease;
+  opacity: 1;
+}
+
+.logo-img.hide {
+  opacity: 0;
+  transform: translateY(-20px);
 }
 
 

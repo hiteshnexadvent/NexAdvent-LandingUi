@@ -1,7 +1,70 @@
-import React from "react";
+import React, { useState } from "react";
 import "./slide.css";
+import Captcha from "./Captcha";
+import axios from "axios";
 
 export default function Form() {
+  const [formData, setFormData] = useState({
+    name: "",
+    email: "",
+    mobile: "",
+    city: "",
+    company: ""
+  });
+
+  const [captchaValue, setCaptchaValue] = useState("");
+
+  const handleChange = (e) => {
+    setFormData({ ...formData, [e.target.name]: e.target.value });
+  };
+
+  const handleCaptchaChange = (value) => {
+    setCaptchaValue(value);
+  };
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+
+    if (!captchaValue) {
+      alert("Please complete the CAPTCHA");
+      return;
+    }
+
+    try {
+      const response = await axios.post(
+        `${process.env.REACT_APP_BACKEND_API_URL}/admin/user-query`,
+        {
+          ...formData,
+          captcha: captchaValue,
+        },
+        {
+          headers: { "Content-Type": "application/json" },
+          withCredentials: true,
+        }
+      );
+
+      if (response.data.message) {
+        alert(response.data.message);
+      }
+
+      setFormData({
+        name: "",
+        email: "",
+        mobile: "",
+        city: "",
+        company: ""
+      });
+      setCaptchaValue("");
+
+    } catch (error) {
+      if (error.response?.data?.message) {
+        alert(error.response.data.message);
+      } else {
+        alert("Something went wrong. Please try again later.");
+      }
+    }
+  };
+
   return (
     <div className="form-top">
       <div className="form">
@@ -14,21 +77,60 @@ export default function Form() {
         </p>
 
         <div className="form-wrapper">
-          <form className="contact-form">
+          <form className="contact-form" onSubmit={handleSubmit}>
             <label>Name</label>
-            <input type="text" placeholder="Jane Smith" />
+            <input
+              type="text"
+              placeholder="Jane Smith"
+              name="name"
+              onChange={handleChange}
+              value={formData.name}
+              required
+            />
 
             <label>Email</label>
-            <input type="email" placeholder="jane@framer.com" />
+            <input
+              type="email"
+              placeholder="jane@framer.com"
+              name="email"
+              onChange={handleChange}
+              value={formData.email}
+              required
+            />
 
             <label>Mobile</label>
-            <input type="mobile" placeholder="1234567890" />
+            <input
+              type="text"
+              placeholder="1234567890"
+              name="mobile"
+              onChange={handleChange}
+              value={formData.mobile}
+              required
+            />
 
             <label>City/State</label>
-            <input type="city" placeholder="delhi" />
+            <input
+              type="text"
+              placeholder="Delhi"
+              name="city"
+              onChange={handleChange}
+              value={formData.city}
+              required
+            />
+            
 
             <label>Company Name</label>
-            <input type="company" placeholder="nexadvent" />
+            <input
+              type="text"
+              placeholder="Nexadvent"
+              name="company"
+              onChange={handleChange}
+              value={formData.company}
+              required
+            />
+
+            {/* Captcha Component */}
+            <Captcha onChange={handleCaptchaChange} />
 
             <button type="submit" className="form-btn">
               Submit
