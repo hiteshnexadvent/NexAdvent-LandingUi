@@ -314,11 +314,14 @@
 
 }
 
-@media (min-width:1400px) and (max-width:1450px) {
+@media (min-width:1400px) and (max-width:1550px) {
 
   .handle {
-   padding-left: 100px;
-   padding-right: 100px;
-}
+   padding-left: 120px;
+   padding-right: 120px;
+  }
+  .handle-col {
+   width: 33%;
+  }
 
 }
