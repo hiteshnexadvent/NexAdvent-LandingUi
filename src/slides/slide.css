@@ -448,3 +448,11 @@ textarea {
   }
   
 }
+
+@media (min-width:1400px) and (max-width:1550px) {
+
+  .step-card img{
+    width: 50% !important;
+  }
+
+}

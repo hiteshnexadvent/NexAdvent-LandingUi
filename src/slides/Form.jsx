@@ -2,6 +2,9 @@ import React, { useState } from "react";
 import "./slide.css";
 import Captcha from "./Captcha";
 import axios from "axios";
+import { toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
+
 
 export default function Form() {
   const [formData, setFormData] = useState({
@@ -25,10 +28,10 @@ export default function Form() {
   const handleSubmit = async (e) => {
     e.preventDefault();
 
-    if (!captchaValue) {
-      alert("Please complete the CAPTCHA");
-      return;
-    }
+     if (!captchaValue) {
+    toast.error("Please complete the CAPTCHA");
+    return;
+  }
 
     try {
       const response = await axios.post(
@@ -44,8 +47,8 @@ export default function Form() {
       );
 
       if (response.data.message) {
-        alert(response.data.message);
-      }
+      toast.success(`${response.data.message}`);
+    }
 
       setFormData({
         name: "",
@@ -57,12 +60,12 @@ export default function Form() {
       setCaptchaValue("");
 
     } catch (error) {
-      if (error.response?.data?.message) {
-        alert(error.response.data.message);
-      } else {
-        alert("Something went wrong. Please try again later.");
-      }
+    if (error.response?.data?.message) {
+      toast.error(`${error.response.data.message}`);
+    } else {
+      toast.error("Something went wrong. Please try again later.");
     }
+  }
   };
 
   return (
