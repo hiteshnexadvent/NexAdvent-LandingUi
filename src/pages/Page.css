@@ -260,14 +260,18 @@
 
   .handle{
     margin-top: 40px;
+    padding: 0 0 0 30px !important;
+  }
+  .handle-col {
+   width:auto;
   }
   .handle h3{
     font-size: 25px !important;
     text-align: start;
-    padding: 0 15px;
+    padding: 0 10px;
   }
   .handle p{
-    padding: 2px 20px !important;
+    padding: 2px 15px !important;
     text-align: start;
   }
   .card-body{
@@ -292,6 +296,7 @@
   .arc-item img {
     width: 55%;
   }
+  
   
 }
 

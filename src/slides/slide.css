@@ -70,6 +70,7 @@
 .banner p{
     padding: 5px 300px;
     margin-bottom: 50px;
+    /* text-align: justify; */
 }
 
 .banner img{
@@ -375,16 +376,28 @@ textarea {
   .form h2{
     font-size: 25px !important;
     padding:0 15px !important;
+    text-align: start;
   }
   .form p{
     text-align: start;
-    padding:10px 35px !important;
+    padding:10px 15px !important;
   }
 
   .form-wrapper{
-    padding: 20px !important;
+    padding: 0px !important;
     margin: auto;
   } 
+
+  .banner h2{
+    padding: 10px 15px !important;
+    text-align: justify;
+  }
+
+  #captcha{
+    margin: 0 !important;
+    display: flex;
+    justify-content: center !important;
+  }
 }
 
 @media (min-width:765px) and (max-width:820px) {
@@ -406,15 +419,32 @@ textarea {
     margin-top: 20px;
   }
 
+  .form h2{
+    text-align: start;
+    padding:10px 35px !important;
+  }
+  .form p{
+    text-align: start;
+    padding:10px 35px !important;
+  }
+
+  .form-wrapper{
+    padding: 0px !important;
+    margin: auto;
+  } 
+
   .step-card {
     position: static !important;
     height: auto;
   }
 
   .banner p{
-    padding: 0 !important;
+    padding: 10px 30px 0 30px !important;
+    text-align: justify;
   }
 
-
+  #captcha{
+    margin: 20px 0 20px 0 !important;
+  }
   
 }
